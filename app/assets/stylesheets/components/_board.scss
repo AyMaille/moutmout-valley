@@ -1,9 +1,14 @@
 .board {
-  width: 800px;
-  height: 800px;
+  width: 1300px;
+  height: 1200px;
   border: 1px solid black;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-left: 75px;
+  padding-right: 25px;
+  text-align: initial;
   display:flex;
-  --s: 100px;  /* size  */
+  --s: 130px;  /* size  */
   --m: 4px;    /* margin */
   --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
 }
@@ -22,9 +27,9 @@
   background: red;
   margin-bottom: calc(var(--m) - var(--s)*0.2885);
 }
-.container div:nth-child(odd) {
-  background:green;
-}
+// .container div:nth-child(odd) {
+//   background:green;
+// }
 .container::before {
   content: "";
   width: calc(var(--s)/2 + var(--m));
