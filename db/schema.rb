@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_22_103738) do
+ActiveRecord::Schema.define(version: 2022_04_22_125026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,19 +18,21 @@ ActiveRecord::Schema.define(version: 2022_04_22_103738) do
   create_table "cards", force: :cascade do |t|
     t.bigint "player_id", null: false
     t.bigint "game_id", null: false
-    t.string "type"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
     t.boolean "drawable", default: true
     t.boolean "discard", default: false
+    t.text "description2"
+    t.string "title"
     t.index ["game_id"], name: "index_cards_on_game_id"
     t.index ["player_id"], name: "index_cards_on_player_id"
   end
 
   create_table "cells", force: :cascade do |t|
     t.bigint "game_id", null: false
-    t.string "type"
+    t.string "category"
     t.integer "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -56,7 +58,7 @@ ActiveRecord::Schema.define(version: 2022_04_22_103738) do
   create_table "units", force: :cascade do |t|
     t.bigint "player_id", null: false
     t.bigint "cell_id", null: false
-    t.string "type"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cell_id"], name: "index_units_on_cell_id"
