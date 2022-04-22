@@ -14,9 +14,9 @@ class GamesController < ApplicationController
 
   private
 
-  def initialize_deck(@game)
+  def initialize_deck(game)
     Card.all.each do |card|
-      card.game = @game
+      card.game = game
     end
   end
 end

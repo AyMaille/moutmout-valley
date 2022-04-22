@@ -354,4 +354,249 @@ Card.create(
   description: "1 - Un de vos pions (ou groupe) peut franchir une rivière, mais pas le lac. Le déplacement s'achève immédiatement après la traversée. 2 - survivre à une inondation. Pas de déplacement mais aucun n'est tué.",
   description2: "1 - pendant la phase de déplacement. 2 -pendant la résolution de l'événement"
 )
-puts "#{Card.all.count} cartes astuces crées"
+puts "#{Card.all.count} cartes astuces créées"
+
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Blizzard",
+  description: "Les pions humains ne se déplacent pas ce tour-ci.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Fleuve Gelé",
+  description: "La rivière désignée par le dé est gelée jusqu'à la fin de l'hiver. Un marqueur est ajouté. Tous les pions peuvent la franchir sans problème. La pêche reste disponible. Si le lac est en contact il est également gelé.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Hordes de loups",
+  description: "Une horde de quatre loups apparaît sur une case du bord de la carte",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Hordes de loups",
+  description: "Une horde de trois loups apparaît sur une case du bord de la carte",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Eruption volcanique",
+  description: "Les volcans entrent en éruption. Ils ne seront pas accessibles ce tour-ci, et tous les pions qui s'y trouvent sont tués. marqueurs incendies ajoutés. La lave s'écoule ensuite, tuant tous les animaux et un humain par case. Cette dernière reste accessible et n'est pas incendié",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Avalanches",
+  description: "Lancez un dé pour désigner la montagne affectée. Tous les animaux qui s'y trouvent sont tués, ainsi qu'un pion humain par case.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Froidures",
+  description: "La survie des humains demandera ce tour-ci 1,5 points de nourriture par pion (arrondi vers le bas)",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Tempête",
+  description: "Les pions humains ne pourront se déplacer que d'une case ce tour-ci",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Chute de neige",
+  description: "Un pion humain choisi par le joueur concerné est tué sur chaque case de montagne. Les pions dans des grottes sont protégés. De plus, les cases sont inaccessibles ce tour-ci et tous les pions qui s'y trouvent sont immobilisés.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Hiver long",
+  description: "L'hiver est très dur cette année. Il durera quatre tours au lieu de trois. A la fin du tour l'indicateur de tour ne sera pas bougé.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Ours des cavernes",
+  description: "Sur une montagne aléatoire. Chaque pion ou groupe se trouvant dans une grotte est attaqué par un ours (sans bonus défensif de la grotte). L'ours s'il est tué rapporte 3 de nourriture normalement. Si aucune grotte, une autre montagne est choisi.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Fleuve Gelé",
+  description: "La rivière désignée par le dé est gelée jusqu'à la fin de l'hiver. Un marqueur est ajouté. Tous les pions peuvent la franchir sans problème. La pêche reste disponible. Si le lac est en contact il est également gelé.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Viande rare",
+  description: "Aucun animal n'apparaît ce tour-ci",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Solitaire",
+  description: "Une femme ou un guerrier solitaire apparaît sur une case aléatoire du bord de la carte. Il se déplace comme les animaux et se bat contre eux s'il est seul. Il rejoindra la première tribu qu'il rencontrera.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "winter",
+  title: "Viande maigre",
+  description: "Les animaux sont efflanqués cet hiver. Il rapportent tous deux points de nourritures en moins qu'à l'habituel jusqu'à la fin de l'hiver.",
+  description2: ""
+)
+
+puts "#{Card.where(category: "winter").count} cartes hiver créées"
+
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Epidémie",
+  description: "sur un d6, 4+ tout le monde perds un guerrier, si moins c'est une femme",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Bonnes pluies",
+  description: "Toutes les récoltes de cette année rapporteront 12 points de nourriture au lieu de 8 (8 au lieu de 4 pour les champs endommagés).",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Automne clément",
+  description: "L'été traîne en longuer cette année. Il durera quatre tours au lieu de trois. A la fin du tour l'indicateur de tour ne sera pas bougé.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Inondation",
+  description: "La rivière désigné sort de son lit. Les cases de plaine et de forêt situées sur sa rive sont innondées et ne seront pas accessibles ce tour-ci. Villages et cultures sont détruits. Animaux tués et un humain par case, les survivants sont immobilisés mais peuvent pêcher.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Sauterelles",
+  description: "Les cultures intactes se trouvant dans la plaine indiquée sont endommagées (les endommagées sont détruites). Les joueurs perdent la moitié de leur stock de nourriture (arrondi vers le bas).",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Orages",
+  description: "Les pions humains ne pourront se déplacer que d'une case ce tour-ci.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Sécheresse",
+  description: "Les cultures encore intactes sont endommagées (les autres détruites). Toutes les rivières peuvent être traversées. La pêche n'est plus possible. Cela dure jusqu'à la fin de l'été ou le tirage d'une carte 'bonnes pluies', 'orages' ou 'innondation'",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Rongeurs",
+  description: "Chaque joueur perd deux points de nourriture par village qu'il possède. Les grottes ne font pas perdre de nourriture.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Eruption volcanique",
+  description: "Les volcans entrent en éruption. Ils ne seront pas accessibles ce tour-ci, et tous les pions qui s'y trouvent sont tués. marqueurs incendies ajoutés. La lave s'écoule ensuite, tuant tous les animaux et un humain par case. Cette dernière reste accessible et n'est pas incendié",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Inondation",
+  description: "La rivière désigné sort de son lit. Les cases de plaine et de forêt situées sur sa rive sont innondées et ne seront pas accessibles ce tour-ci. Villages et cultures sont détruits. Animaux tués et un humain par case, les survivants sont immobilisés mais peuvent pêcher.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Tremblement de terre",
+  description: "Une montagne aléatoire et ses cases voisines voient tous les animaux mourrirent et un pion humain par case.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Incendie de forêt",
+  description: "La forêt désignée prend feu. Obtient un marqueur incendie. Cette forêt est inaccessible ce tour-ci, et tous les pions qui s'y trouvent sont tués.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Incendie de forêt",
+  description: "La forêt désignée prend feu. Obtient un marqueur incendie. Cette forêt est inaccessible ce tour-ci, et tous les pions qui s'y trouvent sont tués.",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Epizootie",
+  description: "sur un d6, 4+ tout le monde perds un guerrier, si moins c'est une femme",
+  description2: ""
+)
+Card.create(
+  player: suisse_player,
+  game: base_game,
+  category: "summer",
+  title: "Solitaire",
+  description: "Une femme ou un guerrier solitaire apparaît sur une case aléatoire du bord de la carte. Il se déplace comme les animaux et se bat contre eux s'il est seul. Il rejoindra la première tribu qu'il rencontrera.",
+  description2: ""
+)
+puts "#{Card.where(category: "summer").count} cartes été créées"
