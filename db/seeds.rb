@@ -10,3 +10,9 @@ User.new(
   email: "jojo@gmail.com",
   password: "123456"
 ).save
+
+User.new(
+  email: "neutralguy@gmail.com",
+  password: "suissepowa",
+  nickname: "suisse"
+)

@@ -1,6 +1,6 @@
 class Game < ApplicationRecord
-  def initialize
-    self.turn = 1
-    self.summer = true
-  end
+has_many :players
+has_many :cards, dependent: :destroy
+has_many :cells, dependent: :destroy
+
 end
